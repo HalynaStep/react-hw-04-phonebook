@@ -38,7 +38,7 @@ export function App() {
       alert(`${name} is already in contacts`);
       return;
     }
-    setContacts(state => [{ id: nanoid(), name, number }, ...state]);
+    setContacts(state => [...state, { id: nanoid(), name, number }]);
   }
 
   function filterContacts() {
